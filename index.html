@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smile Code @youtube | Map reader glass!!!</title>
+    <style>
+      body {
+        overflow: hidden;
+      }
+
+      .map {
+        background: url("t-map.gif") no-repeat;
+        background-attachment: fixed;
+        background-size: 100%;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        filter: blur(2px) grayscale(100%) sepia(10%);
+      }
+
+      .mag {
+        background: url("t-map.gif") no-repeat;
+        background-attachment: fixed;
+        background-size: 100%;
+        border-radius: 50%;
+        border: 8px solid #fff;
+        box-shadow: 0 0 50px #111111, inset 0 0 4px #1111119c;
+        cursor: all-scroll;
+        left: 50%;
+        height: 240px;
+        margin: -118px 0 0 -118px;
+        overflow: hidden;
+        position: absolute;
+        top: 50%;
+        width: 240px;
+      }
+
+      .mag::after {
+        background: linear-gradient(#ffffff, #d8d8d800);
+        border-radius: 50%;
+        height: 50%;
+        left: 10%;
+        position: absolute;
+        top: 5%;
+        width: 80%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="map"></div>
+    <div class="mag"></div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script>
+      $(".mag").draggable();
+    </script>
+  </body>
+</html>
